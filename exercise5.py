@@ -60,7 +60,8 @@ def PositivePatternsWindow(seq,freq,window,k):
 			try:
 				if value[i+(freq-1)]-value[i]<=window:
 					Positives.add(item)
-					i=i+1
+					break
+				i=i+1
 			except:break
 	return Positives
 	
