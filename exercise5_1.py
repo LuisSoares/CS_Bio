@@ -39,7 +39,7 @@ def PatternFrequencies(FrequentPatterns,freq):
 	
 def PatternsCount(seq,k):
 	PatternPosit=dict()
-	for i in range(0,(len(seq)-k)):
+	for i in range(0,(len(seq)-k+1)):
 		PatternPosit[seq[i:i+k]]=PatternPosit.get(seq[i:i+k],[])
 		PatternPosit[seq[i:i+k]].append(i)
 	return PatternPosit
@@ -66,7 +66,7 @@ def PositivePatternsWindow(seq,freq,window,k):
 		i=0
 		while True:
 			try:
-				if value[i+(freq-1)]-value[i]<=window:
+				if value[i+(freq-1)]-value[i]<=window-k: #very important correction
 					Positives.add(item)
 					break
 				i=i+1
