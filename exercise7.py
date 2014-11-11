@@ -17,9 +17,9 @@ def skew(seq):
 def minskew(seq):
 	skewlist=skew(seq)
 	minskew=min(skewlist)
-	for i in range(len(a)):
-    if a[i]==minskew:
-        print (i, end=' ')
+	for i in range(len(seq)):
+		if skewlist[i]==minskew:
+			print (i, end=' ')
 
 
 
