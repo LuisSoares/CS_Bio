@@ -32,7 +32,7 @@ def translate_reading_frames(seq):
 
 def encoding(seq,protein):
         translation=translate_reading_frames(seq)
-        print(translation)
+        #print(translation)
         results=dict()
         for orf,item in enumerate(translation):
                 start=0
